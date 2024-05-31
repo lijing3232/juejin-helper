@@ -33,9 +33,9 @@ export class NotificationKit {
     }
 
     const transporter = nodemailer.createTransport({
-      host: "smtp." + (auth.user as any).match(/@(.*)/)[1],
+      host: "smtp-mail.outlook.com",
       secure: true,
-      port: 465,
+      port: 587,
       auth,
       tls: {
         // do not fail on invalid certs
