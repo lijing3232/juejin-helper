@@ -39,7 +39,8 @@ export class NotificationKit {
       auth,
       tls: {
         // do not fail on invalid certs
-        rejectUnauthorized: false
+        rejectUnauthorized: false,
+        minVersion: "TLSv1.2"
       }
     });
 
