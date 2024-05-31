@@ -34,13 +34,12 @@ export class NotificationKit {
 
     const transporter = nodemailer.createTransport({
       host: "smtp-mail.outlook.com",
-      secure: true,
+      secure: false,
       port: 587,
       auth,
       tls: {
         // do not fail on invalid certs
-        rejectUnauthorized: false,
-        minVersion: "TLSv1.2"
+        rejectUnauthorized: false
       }
     });
 
