@@ -34,6 +34,7 @@ export class NotificationKit {
 
     const transporter = nodemailer.createTransport({
       host: "smtp-mail.outlook.com",
+      requireTLS: true,
       secure: false,
       port: 587,
       auth,
