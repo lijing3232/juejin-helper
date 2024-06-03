@@ -39,9 +39,13 @@ export class NotificationKit {
       port: 587,
       auth,
       tls: {
-        // do not fail on invalid certs
-        rejectUnauthorized: false
-      }
+        minDHSize: 512,
+        minVersion: 'TLSv1',
+        maxVersion: 'TLSv1.3',
+        ciphers: 'ALL',
+      },
+      logger: true,
+      debug: true,
     });
 
     const template = `
